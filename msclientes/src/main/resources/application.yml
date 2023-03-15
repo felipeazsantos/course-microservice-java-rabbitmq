@@ -1,15 +1,20 @@
 spring:
   application:
     name: msclientes
+  datasource:
+    username: sa
+    password:
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
 
 server:
-  port: 0
+  port: ${PORT:0}
 
 eureka:
   client:
-    instance:
-      instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
-    service-url:
+    serviceUrl:
       defaultZone: http://localhost:8761/eureka
-
-
+  instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
