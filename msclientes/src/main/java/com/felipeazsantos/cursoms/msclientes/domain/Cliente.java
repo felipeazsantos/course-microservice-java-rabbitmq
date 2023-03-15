@@ -18,14 +18,14 @@ public class Cliente {
     private String cpf;
 
     @Column
-    private String Nome;
+    private String nome;
 
     @Column
     private Integer idade;
 
     public Cliente(String cpf, String nome, Integer idade) {
         this.cpf = cpf;
-        Nome = nome;
+        this.nome = nome;
         this.idade = idade;
     }
 }
