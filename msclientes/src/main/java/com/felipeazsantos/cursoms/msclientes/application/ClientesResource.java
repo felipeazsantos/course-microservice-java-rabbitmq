@@ -43,6 +43,6 @@ public class ClientesResource {
         if (cliente.isEmpty()) {
             return ResponseEntity.notFound().build();
         }
-        return ResponseEntity.ok(cliente);
+        return ResponseEntity.ok(cliente.get());
     }
 }
