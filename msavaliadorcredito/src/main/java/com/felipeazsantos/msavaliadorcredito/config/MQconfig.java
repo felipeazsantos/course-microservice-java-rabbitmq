@@ -11,6 +11,7 @@ public class MQconfig {
     @Value("${mq.queues.emissao-cartoes}")
     private String emissaoCartoesFila;
 
+    @Bean
     public Queue queueEmissaoCartoes() {
         return new Queue(emissaoCartoesFila, true);
     }
